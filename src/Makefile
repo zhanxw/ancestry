@@ -57,8 +57,8 @@ INCLUDE = $(VCF_INC) $(THIRD_INC) $(BASE_INC)
 LIB = $(VCF_LIB) $(BASE_LIB) $(THIRD_LIB) 
 LIB_DBG = $(VCF_LIB_DBG) $(BASE_LIB_DBG) $(THIRD_LIB)
 CXX_INCLUDE = $(addprefix -I, $(INCLUDE)) -I.
-CXX_LIB = $(LIB) -lgslcblas -lz -lm -lpthread
-CXX_LIB_DBG = $(LIB_DBG) -lgslcblas -lz -lm -lpthread
+CXX_LIB = $(LIB) -lz -lm -lpthread
+CXX_LIB_DBG = $(LIB_DBG) -lz -lm -lpthread
 
 
 DEFAULT_CXXFLAGS = -D__STDC_LIMIT_MACROS -std=c++0x #-Wall
