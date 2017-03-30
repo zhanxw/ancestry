@@ -21,8 +21,7 @@ GSL_LIB = third/gsl/lib/libgsl.a
 BZIP2_INC = third/bzip2
 BZIP2_LIB = third/bzip2/libbz2.a
 
-OPENBLAS_LIB = third/openblas/lib/libopenblas.a
-BLAS_LIB = /usr/lib/libblas.a
+BLAS_LIB = third/openblas/lib/libopenblas.a
 
 $(TABIX_INC) $(TABIX_LIB):
 	(cd third; make tabix)
@@ -58,8 +57,8 @@ INCLUDE = $(VCF_INC) $(THIRD_INC) $(BASE_INC)
 LIB = $(VCF_LIB) $(BASE_LIB) $(THIRD_LIB) 
 LIB_DBG = $(VCF_LIB_DBG) $(BASE_LIB_DBG) $(THIRD_LIB)
 CXX_INCLUDE = $(addprefix -I, $(INCLUDE)) -I.
-CXX_LIB = $(LIB) -lgslcblas -lz -lm 
-CXX_LIB_DBG = $(LIB_DBG) -lgslcblas -lcblas -lz -lm -lcblas
+CXX_LIB = $(LIB) -lgslcblas -lz -lm -lpthread
+CXX_LIB_DBG = $(LIB_DBG) -lgslcblas -lz -lm -lpthread
 
 
 DEFAULT_CXXFLAGS = -D__STDC_LIMIT_MACROS -std=c++0x #-Wall
