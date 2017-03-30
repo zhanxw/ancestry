@@ -51,7 +51,6 @@ rapidjson: rapidjson-1.0.2.tar.gz
 
 openblas: openblas-0.2.19.zip
 	unzip $<
-	ln -s -f OpenBLAS-0.2.19 openblas
 	-(DIR=`pwd`; cd OpenBLAS-0.2.19; make; make PREFIX="$${DIR}"/openblas install)
 
 ######################################################################

@@ -2,3 +2,4 @@
 *.o
 *.d
 executable
+src/GitVersion.h
