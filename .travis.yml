@@ -68,4 +68,4 @@ before_install:
   - ulimit -a
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -q && sudo apt-get install -y -qq gfortran; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew install gcc; brew reinstall gcc --without-multilib; fi
-script: make CXX=$COMPILER -C third/ && make CXX=$COMPILER
+script: make CXX=$COMPILER -C src/third/ && make CXX=$COMPILER -C src/
