@@ -1,6 +1,6 @@
 # download all third party library and compile them
 
-LIB = tabix gsl
+LIB = tabix gsl openblas
 all: $(LIB)
 
 tabix: tabix-0.2.6.tar.bz2
